@@ -1,63 +1,51 @@
 <?php
+
 $mensagem = "";
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (isset($_POST["numero"]) && !empty(trim($_POST["numero"]))) {
+
         $numero = intval($_POST["numero"]);
-        $calculo = $numero % 2;
-        $resultado = '';
 
-        if ($calculo != 0) {
-            $resultado = "Impar";
+        if ($numero > 0) {
+            $mensagem = "A tabuada do $numero é <br>";
 
-            $mensagem = "O $numero é $resultado.";
+            for ($i = 1; $i <= 10; $i++) {
 
+                $multiplo = $numero * $i;
+
+
+                $mensagem .= "$multiplo <br>";
+            }
         } else {
-            $resultado = "Par";
-            $mensagem = "O $numero é $resultado";
+            $mensagem = "Por favor, insira um número inteiro positivo.";
         }
-        ;
-
     } else {
         $mensagem = "Por favor, preencha o campo número.";
     }
 }
-?>  
+
+?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
-    <title>Exemplo com PHP</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            font-size: 16pt;
-            margin: 1em;
-        }
-
-        .resultado {
-            margin-top: 1em;
-            padding: 1em;
-            background-color: rgb(241, 241, 241);
-            border-radius: 5px;
-        }
-
-        h1 {
-            font-size: 2em;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exibir Múltiplos</title>
 </head>
 
 <body>
-    <h1>CALCULADORA DO resultado</h1>
+
     <form method="post">
         <label for="numero">Digite um número:</label>
         <input type="number" name="numero" id="numero"
             value="<?= isset($_POST["numero"]) ? htmlspecialchars($_POST["numero"]) : '' ?>">
+
         <button type="submit">Calcular</button>
     </form>
+
     <div class="resultado">
         <h1>Resultado</h1>
         <p><?= $mensagem ?></p>
