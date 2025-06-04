@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     <form method="post">
         <label for="nota">Digite a nota:</label>
-        <input type="number" step="any" name="nota" id="nota"
+        <input type="number" name="nota" id="nota"
             value="<?= isset($_POST["nota"]) ? htmlspecialchars($_POST["nota"]) : '' ?>">
 
         <button type="submit">Arredondar</button>
@@ -40,6 +40,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <div class="resultado">
         <h1>Resultado</h1>
         <p><?= $mensagem ?></p>
+        <br><br>
+        <button type="button" onclick="window.location.href='http://localhost/ProjetoNoite/'">Voltar</button>
     </div>
 
 </body>

@@ -24,10 +24,15 @@
         <div class="links"><a href="./exer9/exer9.php">Exer9</a></div>
         <div class="links"><a href="./exer10/exer10.php">Exer10</a></div>
         <div class="links"><a href="./exer11/exer11.php">Exer11</a></div>
+        <div class="links"><a href="./exer12/exer12.php">Exer12</a></div>
         <div class="links"><a href="./add1/add1.php">Add1</a></div>
         <div class="links"><a href="./add2/add2.php">Add2</a></div>
         <div class="links"><a href="./add3/add3.php">Add3</a></div>
         <div class="links"><a href="./add4/add4.php">Add4</a></div>
+        <div class="links"><a href="./add5/add5.php">Add5</a></div>
+        <div class="links"><a href="./add6/add6.php">Add6</a></div>
+        <div class="links"><a href="./add7/add7.php">Add7</a></div>
+        <div class="links"><a href="./add8/add8.php">Add8</a></div>
     </div>
 </body>
 

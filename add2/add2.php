@@ -11,8 +11,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $precoFinal = $preco - $desconto;
 
         $mensagem = "Preço original: R$ " . number_format($preco, 2, ",", ".") . "<br>" .
-                    "Desconto sorteado: $percentual%<br>" .
-                    "Preço com desconto: R$ " . number_format($precoFinal, 2, ",", ".");
+            "Desconto sorteado: $percentual%<br>" .
+            "Preço com desconto: R$ " . number_format($precoFinal, 2, ",", ".");
     } else {
         $mensagem = "Por favor, informe o preço do produto.";
     }
@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     <form method="post">
         <label for="preco">Digite o preço do produto:</label>
-        <input type="number" name="preco" id="preco" step="0.01"
+        <input type="number" name="preco" id="preco"
             value="<?= isset($_POST["preco"]) ? htmlspecialchars($_POST["preco"]) : '' ?>">
 
         <button type="submit">Sortear Desconto</button>
@@ -41,6 +41,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <div class="resultado">
         <h1>Resultado</h1>
         <p><?= $mensagem ?></p>
+         <br><br>
+        <button type="button" onclick="window.location.href='http://localhost/ProjetoNoite/'">Voltar</button>
     </div>
 
 </body>

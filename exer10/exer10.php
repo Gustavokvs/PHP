@@ -57,6 +57,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <div>
         <h2>Resultado</h2>
         <p><?= $mensagem ?></p>
+         <br><br>
+        <button type="button" onclick="window.location.href='http://localhost/ProjetoNoite/'">Voltar</button>
     </div>
 </body>
 
