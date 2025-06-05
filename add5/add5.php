@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 <head>
     <meta charset="UTF-8" />
-    <title>Arredondador de nomes</title>
+    <title>Gerador de nomes</title>
 </head>
 
 <body>
